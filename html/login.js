@@ -28,21 +28,18 @@ const passwordInput = document.getElementById('password');
 const loginBtn = document.getElementById('login-btn');
 const form = document.getElementById('form');
 
+async function signIn(email, password) {
+	const promise = auth.signInWithEmailAndPassword(email, password);
+	console.log(await promise);
+	promise.catch(e => console.log(e.message));
+}
+
 form.addEventListener('submit', function(e) {
 		e.preventDefault();
 		const name = nameInput.value;
 		const password = passwordInput.value;
 		
 		
-		auth.signInWithEmailAndPassword(name, password)
-		.then((userCredential) => {
-			const user = userCredential.user;
-			console.log(user);
-		})
-		.catch((error) => {
-			const errorCode = error.code;
-			const errorMessage = error.message;
-			console.log(errorCode, errorMessage);
-		});
+		signIn(name, password);
 })
 
