@@ -26,7 +26,7 @@
       </button>
     </div>
 
-     <!-----sidbar-->
+     <!-----sidbar----------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="sidebar-links">
       <ul>
@@ -75,7 +75,7 @@
             <div class="icon">
               <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
-            <button class="tablinks" onclick="opentab(event, 'Skills')"><span class="link hide">Skills</span>
+            <button class="tablinks" onclick="opentab(event, 'Skills')"> <span class="link hide">Skills</span>
             </button>
 
           </a>
@@ -93,7 +93,8 @@
 
           </a>
         </li>
-        <li class="tooltip-element" data-tooltip="2">
+
+        <li class="tooltip-element" data-tooltip="1">
           <a href="#" data-active="2">
             <div class="icon">
               <i class="fa-solid fa-users-gear"></i>
@@ -103,21 +104,10 @@
 
           </a>
         </li>
-        <li class="tooltip-element" data-tooltip="3">
-          <a href="#" data-active="3">
-            <div class="icon">
-              <i class="fa-solid fa-message"></i>
-            </div>
-            <button class="tablinks" onclick="opentab(event, 'Message')"><span class="link hide">Message</span>
-            </button>
-
-          </a>
-        </li>
+       
         
       </ul>
 
-
-    
     </div>
 
     <div class="sidebar-footer">
@@ -138,44 +128,37 @@
 
 </div>
 
-     <!------Dashbord-->
+     <!------Dashbord---------------------------------------------------------------------------------------------------------------------------------------------->
 
   <main>
     <div id="Dashbord" class="tabcontent">
       <h3>Dashbord</h3>
      
       <div id="dashbord">
-
-      <div class="dash">
-        
-      </div>
-      <div class="dash">2</div>
-      <div class="dash">3</div>
-      <div class="dash">4</div>
-      <div class="dash">5</div>
-      <div class="dash">6</div>
-
-
+      
+       <div class="dash" style="background-image:url(img/view.png) ; background-size: cover; background-position: center;";>
+        <a href=""></a> </div>
+           <div class="dash" style="background-image:url(img/mail.png) ; background-size: cover; background-position: center;";>
+        <a href=""></a></div>
+          <div class="dash" style="background-image:url(img/chart.png) ; background-size: cover; background-position: center;";></div>
       </div>
      
-       
     </div>
-         <!------profil-->
+    <main>
+         <!------profil--------------------------------------------------------------------------------------------------------------------------------->
     <div id="Profil" class="tabcontent">
       <h3>Profil</h3>
       <hr>
-      
         <form action="profile.php" class="form1">
 
-        <div class="row">
-         
-          <div class="col-25">
-        <label for="UserName">User Name</label>
+         <div class="row">
+         <div class="col-25">
+         <label for="UserName">User Name</label>
           </div>
-        <div class="col-75">
-        <input type="text" id="Uname" placeholder="User name">
+         <div class="col-75">
+         <input type="text" id="Uname" placeholder="User name">
       
-        </div>
+         </div>
         <div class="col-25">
         <label for="Email">E-mail</label>
       </div>
@@ -190,11 +173,7 @@
   <div class="col-75">
     <input type="text" id="pass" placeholder="Password">
   </div>
-      
-
-         
-
-
+    
         <div class="row">
           <div class="col-25">
             <label for="imagebg"></label>
@@ -205,13 +184,10 @@
       </div>
       </form>
 
-     
-
-
     </div>
 
 
-      <!------setting-->
+      <!------setting-------------------------------------------------------------------------------------------------------------------------------------->
     
     <div id="Setting" class="tabcontent">
       <h3>Setting</h3>
@@ -226,8 +202,7 @@
 
       <div id="website" class="tabcontent2">
         
-        
-        <form action="setting-web.php" class="form1">
+           <form action="setting-web.php" class="form1">
 
           <div class="row">
             <div class="col-25">
@@ -410,7 +385,7 @@
 
    
 
-    <!----about me about me tab---------------------------------------------------------------------------------------------------------->
+    <!----about me about me tab------------------------------------------------------------------------------------------------------------------------------->
 
     <div id="AboutMe" class="tabcontent">
       <h3>About me</h3>
@@ -564,116 +539,63 @@
   </div>
 
 
-    <!----education------------------------------------------------------------------------------------------------>
+    <!----education------------------------------------------------------------------------------------------------------------------------------------------->
 
     
-    <div id="Education" class="tabcontent">
-      <h3>education</h3>
-      <hr>
-        <div class="tab4">
-         
+    <div id="Education" class="tabcontent4">
+           <h3>Education</h3>
+              <hr>
+      <div class="tab4">
 
-
-          <form action="education.php" class="form1">
+        <form action="education.php" class="form1">
            
-            <div class="row">
-              
-            <div class="col-25"  style="margin-right:2em ;">
+          <div class="row">
+            <div class="col-25"  style="margin-right:1em ;">
             <label for="school">School/Univercity</label>
             <input type="text" id="school" placeholder="School/Univercity">
             </div>
 
-            <div class="col-25"  style="margin-right:2em ;">
+            <div class="col-25"  style="margin-right:1em ;">
             <label for="filed">Filed</label>
             <input type="text" id="filed" placeholder="Filed">
             </div>
 
-            <div class="col-25" style="margin-right:2em ;">
+            <div class="col-25" style="margin-right:1em ;">
             <label for="degree">Degree</label>
             <input type="text" id="degree" placeholder="Degree">
             </div>
             
 
             <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-            <button id="btn">Add row</button>
-              </div>
+            <button id="btn">Add</button>
+          </div>
            
   
   
-            <div class="row">
+          <div class="row">
               <div class="col-25">
                 <label for="imagebg"></label>
-               </div>
+              </div>
                <input type="submit" value="Save">
                <button type="cancel" class="cancel" onclick=";">Cancel </button>
-            </div>
+              </div>
           </div>
-          </form>
+        </form>
 
 
 
       </div>
-
-  <!------setting web-->
-
-      
-    <!----education------------------------------------------------------------------------------------------------>
-
-    
-    <div id="Skills" class="tabcontent5">
-      <h3>Skills</h3>
-      <hr>
-        <div class="tab5">
-         
-
-
-          <form action="skill.php" class="form1">
-           
-            <div class="row">
-              
-            <div class="col-25"  style="margin-right:2em ;">
-            <label for="skill">Skill</label>
-            <input type="text" id="skill" placeholder="skill">
-            </div>
-
-            
-
-            <div class="col-25" style="margin-right:2em ;">
-            <label for="per">Percentage</label>
-            <input type="text" id="per" placeholder="Percentage">
-            </div>
-            
-
-            <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-            <button id="btn">Add row</button>
-              </div>
-           
-  
-  
-            <div class="row">
-              <div class="col-25">
-                <label for="imagebg"></label>
-               </div>
-               <input type="submit" value="Save">
-               <button type="cancel" class="cancel" onclick=";">Cancel </button>
-            </div>
-          </div>
-          </form>
-
-
-
-      </div>
-      
-
-
-
-
-
-
-
-
-
     </div>
+
+      
+    <!----skill------------------------------------------------------------------------------------------------>
+
+   
+    
+
+
+
+
   </main>
 
 
