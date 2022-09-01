@@ -11,6 +11,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
+  
+  <script defer type="module" src="./firebaseConfig.js"></script>
+  <script defer type="module" src="./index.js"></script>
 </head>
 
 <body>
@@ -401,7 +404,7 @@
       <div id="Aboutme" class="tabcontent3">
         
         
-        <form action="aboutme.php" class="form1">
+        <form method="post" id='aboutMeForm' class="form1">
 
           <div class="row">
           <div class="col-25">
@@ -421,14 +424,14 @@
            <label for="imageAbout">image</label>
           </div>
           <div class="col-75">
-           <input type="file" onchange="previewFile()" width="100%" height="auto">
+           <input type="file" id='imageAbout' width="100%" height="auto">
           </div>
 
           <div class="col-25">
             <label for="cv">Resume</label>
            </div>
            <div class="col-75">
-            <input type="file" onchange="previewFile()" width="100%" height="auto">
+            <input type="file" id='cv' width="100%" height="auto">
            </div>
 
 
@@ -859,21 +862,21 @@
   <!--imag file--> 
 
 <script>
-  function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+//   function previewFile() {
+//   var preview = document.querySelector('img');
+//   var file    = document.querySelector('input[type=file]').files[0];
+//   var reader  = new FileReader();
 
-  reader.onloadend = function () {
-    preview.src = reader.result;
-  }
+//   reader.onloadend = function () {
+//     preview.src = reader.result;
+//   }
 
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = "";
-  }
-}
+//   if (file) {
+//     reader.readAsDataURL(file);
+//   } else {
+//     preview.src = "";
+//   }
+// }
 </script>
 
 <!---add remove-->
