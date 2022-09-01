@@ -1,16 +1,33 @@
-// import { db } from "./firebaseConfig.js";
+import { db, setDoc, doc, ref, storage, uploadBytes, getDownloadURL } from "./firebaseConfig.js";
 
-// const button = document.querySelector('.btn-test');
-// const heroRef = db.collection('sections', 'heroSection');
+const aboutMeForm =document.querySelector("#aboutMeForm");
+const heroRef = doc(db, 'sections', 'heroSection');
 
+// Uploads files to firebase storage and returns the url
+const uploadFile = async (file) => {
+  const storageRef = ref(storage, file.name);
+	await uploadBytes(storageRef, file);
+	const url = await getDownloadURL(storageRef);
+	return url;
+}
 
-// const heroSection = async () => {
-//    const data = await db.setDoc(heroRef, {
-// 		about: "test",
-// 		headline: "test",
-// 		image: "test",
-// 	 });
-// 	 return data;
-// }
+// Store Hero Section data in firebase
+const heroSection = async (about, headline, image, resume) => {
+  await setDoc(heroRef, {
+		about: about,
+		headline: headline,
+		image: image,
+		resume: resume,
+	 });
+}
 
-// button.addEventListener('click', heroSection);
+aboutMeForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const about = document.querySelector("#Aboutme2").value;
+	const headline = document.querySelector("#NameAbout").value;
+	const image = document.querySelector("#imageAbout").files[0];
+	const resume = document.querySelector("#cv").files[0];
+	const storedImage = await uploadFile(image);
+	const storedResume = await uploadFile(resume);
+	heroSection(about, headline, storedImage, storedResume);
+});
