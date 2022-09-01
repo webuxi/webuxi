@@ -458,14 +458,14 @@
       <div id="Contact" class="tabcontent3">
 
 
-        <form action="contact.php" class="form1">
+        <form method="post" id="contactForm" class="form1">
 
           <div class="row">
             <div class="col-25">
-              <label for="Address">Address</label>
+              <label for="address">Address</label>
             </div>
             <div class="col-75">
-              <input type="text" id="adress" placeholder="Adresse ">
+              <input type="text" id="address" placeholder="Adresse ">
 
             </div>
             <div class="col-25">
@@ -478,14 +478,14 @@
               <label for="phone">Phone Number</label>
             </div>
             <div class="col-75">
-              <input type="text" id="phone" placeholder="Phone number">
+              <input type="tel" id="phone" placeholder="Phone number">
             </div>
 
             <div class="col-25">
               <label for="email">E-mail</label>
             </div>
             <div class="col-75">
-              <input type="text" id="email" placeholder="Email">
+              <input type="email" id="email" placeholder="Email">
             </div>
 
 
@@ -598,11 +598,11 @@
     <div id="Skills" class="tabcontent">
       <h3>Skills</h3>
       <div class="tab5">
-        <form action="skill.php" class="form1">
+        <form method="post" id='skillsForm' class="form1">
           <div class="row">
             <div class="col-25" style="margin-right:1em;">
               <label for="skill">Skill</label>
-              <input type="text" id="Skill" placeholder="Skill">
+              <input type="text" id="skill" placeholder="Skill">
             </div>
 
 
@@ -611,10 +611,6 @@
               <input type="text" id="per" placeholder="100%">
             </div>
 
-
-
-            <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-            <button id="btn">Add</button>
           </div>
           <br>
           <hr>
@@ -622,11 +618,7 @@
 
 
           <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
-            </div>
             <input type="submit" value="Save">
-            <button type="cancel" class="cancel" onclick=";">Cancel </button>
           </div>
       </div>
       </form>

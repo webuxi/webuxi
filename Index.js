@@ -99,3 +99,44 @@ educationForm.addEventListener('submit', async (e) => {
 	educationForm.reset();
 })
 
+// Store Skills data in firebase
+const skillsForm = document.querySelector("#skillsForm");
+const skillsRef = collection(db, 'skills');
+
+const skillsSection = async (skill, percentage) => {
+	await addDoc(skillsRef, {
+			skill: skill,
+			percentage: percentage,
+	});
+}
+
+skillsForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const skill = document.querySelector("#skill").value;
+	const percentage = document.querySelector("#per").value;
+	skillsSection(skill, percentage);
+	skillsForm.reset();
+});
+
+// Store Contact data in firebase 
+const contactForm = document.querySelector("#contactForm");
+const contactRef = doc(db, 'contact', 'data');
+
+const contactSection = async (email, phone, address, location) => {
+	await setDoc(contactRef, {
+			email: email,
+			phone: phone,
+			address: address,
+			location: location,
+	});
+};
+
+contactForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const email = document.querySelector("#email").value;
+	const phone = document.querySelector("#phone").value;
+	const address = document.querySelector("#address").value;
+	const location = document.querySelector("#location").value;
+	contactSection(email, phone, address, location);
+	contactForm.reset();
+});

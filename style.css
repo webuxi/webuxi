@@ -617,7 +617,7 @@ body.shrink .tooltip {
     display: block;
   }
  
-  input[type=text],select,textarea{
+  input,select,textarea{
     width: 100%;
     height: 2em;
     padding: 1.5em;
@@ -649,6 +649,7 @@ body.shrink .tooltip {
     float: left;
     margin-top: 2em;
     margin-left: 2em;
+    width: fit-content;
   }
   
   button .cancel {
