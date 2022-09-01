@@ -31,3 +31,27 @@ aboutMeForm.addEventListener('submit', async (e) => {
 	const storedResume = await uploadFile(resume);
 	heroSection(about, headline, storedImage, storedResume);
 });
+
+// Store Experience data in firebase
+
+const experienceForm = document.querySelector("#Experiance");
+const experienceRef = doc(db, 'sections', 'experience');
+
+const experienceSection = async (company, position, startDate, endDate) => {
+	await setDoc(experienceRef, {
+		[company]: {
+			position: position,
+			startDate: startDate,
+			endDate: endDate,
+		},
+	});
+}
+
+experienceForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const company = document.querySelector("#company").value;
+	const position = document.querySelector("#position").value;
+	const	startDate = document.querySelector("#startDate").value;
+	const	endDate = document.querySelector("#endDate").value;
+	experienceSection(company, position, startDate, endDate);
+});
