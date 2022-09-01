@@ -140,3 +140,22 @@ contactForm.addEventListener('submit', async (e) => {
 	contactSection(email, phone, address, location);
 	contactForm.reset();
 });
+
+// Store Social data in firebase
+const socialForm = document.querySelector("#socialForm");
+const socialRef = collection(db, 'social');
+
+const socialSection = async (socialName, socialLink) => {
+	await addDoc(socialRef, {
+			socialName: socialName,
+			socialLink: socialLink,
+	});
+}
+
+socialForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const socialName = document.querySelector("#socialName").value;
+	const socialLink = document.querySelector("#socialLink").value;
+	socialSection(socialName, socialLink);
+	socialForm.reset();
+});
