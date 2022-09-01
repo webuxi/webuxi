@@ -1,7 +1,7 @@
-import { db, setDoc, doc, ref, storage, uploadBytes, getDownloadURL } from "./firebaseConfig.js";
+import { db, setDoc, doc, ref, storage, uploadBytes, getDownloadURL, collection, addDoc } from "./firebaseConfig.js";
 
 const aboutMeForm =document.querySelector("#aboutMeForm");
-const heroRef = doc(db, 'sections', 'heroSection');
+const heroRef = doc(db, 'hero', 'data');
 
 // Uploads files to firebase storage and returns the url
 const uploadFile = async (file) => {
@@ -30,20 +30,20 @@ aboutMeForm.addEventListener('submit', async (e) => {
 	const storedImage = await uploadFile(image);
 	const storedResume = await uploadFile(resume);
 	heroSection(about, headline, storedImage, storedResume);
+	aboutMeForm.reset();
 });
 
 // Store Experience data in firebase
 
-const experienceForm = document.querySelector("#Experiance");
-const experienceRef = doc(db, 'sections', 'experience');
+const experienceForm = document.querySelector("#experienceForm");
+const experienceRef = collection(db, 'experience');
 
 const experienceSection = async (company, position, startDate, endDate) => {
-	await setDoc(experienceRef, {
-		[company]: {
+	await addDoc(experienceRef, {
+			company: company,
 			position: position,
 			startDate: startDate,
 			endDate: endDate,
-		},
 	});
 }
 
@@ -54,4 +54,28 @@ experienceForm.addEventListener('submit', async (e) => {
 	const	startDate = document.querySelector("#startDate").value;
 	const	endDate = document.querySelector("#endDate").value;
 	experienceSection(company, position, startDate, endDate);
+	experienceForm.reset();
+});
+
+// Store Projects data in firebase
+
+const projectsForm = document.querySelector("#projectsForm");
+const projectsRef = collection(db, 'projects');
+
+const projectsSection = async (projectName, projectImage, projectLink) => {
+	await addDoc(projectsRef, {
+			projectName: projectName,
+			projectImage: projectImage,
+			projectLink: projectLink,
+	});
+}
+
+projectsForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const projectName = document.querySelector("#projectName").value;
+	const projectImage = document.querySelector("#projectImage").files[0];
+	const projectLink = document.querySelector("#projectLink").value;
+	const storedImage = await uploadFile(projectImage);
+	projectsSection(projectName, storedImage, projectLink);
+	projectsForm.reset();
 });
