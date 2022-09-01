@@ -34,7 +34,6 @@ aboutMeForm.addEventListener('submit', async (e) => {
 });
 
 // Store Experience data in firebase
-
 const experienceForm = document.querySelector("#experienceForm");
 const experienceRef = collection(db, 'experience');
 
@@ -58,7 +57,6 @@ experienceForm.addEventListener('submit', async (e) => {
 });
 
 // Store Projects data in firebase
-
 const projectsForm = document.querySelector("#projectsForm");
 const projectsRef = collection(db, 'projects');
 
@@ -79,3 +77,25 @@ projectsForm.addEventListener('submit', async (e) => {
 	projectsSection(projectName, storedImage, projectLink);
 	projectsForm.reset();
 });
+
+// Store Education data in firebase
+const educationForm = document.querySelector("#educationForm");
+const educationRef = collection(db, 'education');
+
+const educationSection = async (school, degree, fieldOfStudy) => {
+	await addDoc(educationRef, {
+			school: school,
+			degree: degree,
+			fieldOfStudy: fieldOfStudy,
+	});
+}
+
+educationForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const school = document.querySelector("#school").value;
+	const degree = document.querySelector("#degree").value;
+	const fieldOfStudy = document.querySelector("#fieldOfStudy").value;
+	educationSection(school, degree, fieldOfStudy, startDate, endDate);
+	educationForm.reset();
+})
+
