@@ -14,9 +14,11 @@
 
   <script defer type="module" src="./firebaseConfig.js"></script>
   <script defer type="module" src="./dashboard.js"></script>
+  <script defer type="module" src="./tracking.js"></script>
 </head>
 
-<body>
+<body id="body">
+
   <nav>
     <div class="tab">
 
@@ -121,7 +123,7 @@
       <div class="sidebar-footer">
 
 
-        <a href="#" class="log-out">
+        <a href="#" class="log-out" id="logOut">
           <i class='bx bx-log-out'></i>
         </a>
       </div>
@@ -550,8 +552,8 @@
             </div>
 
           </div>
-        <br>
-         <hr>
+          <br>
+          <hr>
           <div class="row">
             <div class="col-25">
               <label for="imagebg"></label>
@@ -681,7 +683,7 @@
 
             <div class="col-20">
               <label for="projectImage">Image</label>
-                <input type="file" id="projectImage" >
+              <input type="file" id="projectImage">
             </div>
 
           </div>
@@ -711,15 +713,6 @@
 
   </main>
 
-
-
-
-
-
-
-
-
-  <script src="app.js"></script>
 
 
 
