@@ -6,7 +6,7 @@ const form = document.getElementById('form');
 
 async function signIn(email, password) {
 	await signInWithEmailAndPassword(auth, email, password);
-	location.href = './index.html';
+	location.href = './dashboard.html';
 }
 
 form.addEventListener('submit', function(e) {

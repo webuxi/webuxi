@@ -4,7 +4,7 @@ import { getFirestore, collection, setDoc, doc, addDoc } from 'https://www.gstat
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-storage.js"
 // Firebase configuration
 const firebaseConfig = {
-	
+
 };
 
 // Initialize Firebase

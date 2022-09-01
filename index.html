@@ -1,874 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sidebar Menu</title>
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="style.css">
-
-  <script defer type="module" src="./firebaseConfig.js"></script>
-  <script defer type="module" src="./index.js"></script>
-</head>
-
-<body>
-  <nav>
-    <div class="tab">
-
-      <div class="sidebar-top">
-        <span class="shrink-btn">
-          <i class='bx bx-chevron-left'></i>
-        </span>
-        <i class="fa-solid fa-circle-user"></i>
-        <button class="tablinks" onclick="opentab(event, 'Profil')">
-          <h3 class="hide">Admin</h3>
-        </button>
-      </div>
-
-      <!-----sidbar----------------------------------------------------------------------------------------------------------------------------------------------->
-
-      <div class="sidebar-links">
-        <ul>
-          <div class="active-tab"></div>
-          <li class="tooltip-element" data-tooltip="0">
-            <a href="#" class="active" data-active="0">
-              <div class="icon">
-                <i class="fa-solid fa-gauge"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Dashbord')" id="defaultOpen"><span
-                  class="link hide">Dashboard</span>
-              </button>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="1">
-              <div class="icon">
-                <i class="fa-solid fa-gear"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Setting')"><span class="link hide">setting</span>
-              </button>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="1">
-              <div class="icon">
-                <i class="fa-solid fa-address-card"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'AboutMe')"><span class="link hide">About me</span>
-              </button>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="1">
-              <div class="icon">
-                <i class="fa-solid fa-book-open-reader"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Education')"> <span class="link hide">Education</span>
-              </button>
-
-            </a>
-          </li>
-
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="1">
-              <div class="icon">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Skills')"> <span class="link hide">Skills</span>
-              </button>
-
-            </a>
-          </li>
-
-
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="1">
-              <div class="icon">
-                <i class="fa-solid fa-users-rays"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Experiance')"><span class="link hide">Experiance</span>
-              </button>
-
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" data-active="2">
-              <div class="icon">
-                <i class="fa-solid fa-users-gear"></i>
-              </div>
-              <button class="tablinks" onclick="opentab(event, 'Project')"><span class="link hide">Project</span>
-              </button>
-
-            </a>
-          </li>
-
-
-        </ul>
-
-      </div>
-
-      <div class="sidebar-footer">
-
-
-        <a href="#" class="log-out">
-          <i class='bx bx-log-out'></i>
-        </a>
-      </div>
-      <div class="tooltip">
-
-        <span>Logout</span>
-      </div>
-    </div>
-  </nav>
-
-  </div>
-
-  <!------Dashbord---------------------------------------------------------------------------------------------------------------------------------------------->
-
-  <main>
-    <div id="Dashbord" class="tabcontent">
-      <h3>Dashbord</h3>
-
-      <div id="dashbord">
-
-        <div class="dash"
-          style="background-image:url(img/view.png) ; background-size: cover; background-position: center;" ;>
-          <a href=""></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="main-content">
+    <header class="container header active" id="home">
+      <div class="header-content">
+        <div class="left-header">
+          <div class="h-shape"></div>
+          <div class="image">
+            <img src="img/Meghana.jpg" alt="" />
+          </div>
         </div>
-        <div class="dash"
-          style="background-image:url(img/mail.png) ; background-size: cover; background-position: center;" ;>
-          <a href=""></a>
+        <div class="right-header">
+          <h1 class="name">
+            Hi, I'm <span>Meghana.</span>
+            A Frontend Developer.
+          </h1>
+          <p>
+            Since beginning my journey as a frontend developer over 3 years,
+            I've worked for companies and collaborated with talented people to
+            create digital products for both business and consumer use. I'm
+            quietly confident, naturally curious, and perpetually working on
+            improving my chops one design problem at a time.
+          </p>
+          <div class="btn-con">
+            <a
+              href="./Resume/Manimeghana Vudathu Resume.pdf"
+              download="Manimeghana Resume"
+              class="main-btn"
+            >
+              <span class="btn-text">Download CV</span>
+              <span class="btn-icon"><i class="fas fa-download"></i></span>
+            </a>
+          </div>
         </div>
-        <div class="dash"
-          style="background-image:url(img/chart.png) ; background-size: cover; background-position: center;" ;></div>
       </div>
-
-    </div>
-    <!------profil--------------------------------------------------------------------------------------------------------------------------------->
-    <div id="Profil" class="tabcontent">
-      <h3>Profil</h3>
-      <hr>
-      <form action="profile.php" class="form1">
-
-        <div class="row">
-          <div class="col-25">
-            <label for="UserName">User Name</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="Uname" placeholder="User name">
-
-          </div>
-          <div class="col-25">
-            <label for="Email">E-mail</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="EeMail" placeholder="E-mail">
-          </div>
-
+    </header>
+    <main>
+      <section class="container about" id="about">
+        <div class="main-title">
+          <h2>About <span>me</span></h2>
         </div>
-        <div class="col-25">
-          <label for="password">Password</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="pass" placeholder="Password">
-        </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="imagebg"></label>
+        <div class="about-container">
+          <div class="left-about">
+            <h4>Information About me</h4>
+            <p>
+              <br />
+              Great team-player and follow a process of peer-code-review and any
+              inputs suggested is taken into consideration which helps in
+              continuous learning.<br />
+              <br />
+              Strong troubleshooting skills and proactive in fixing defects in
+              the development and production environment in a quick and
+              optimized fashion.
+            </p>
+            <div class="btn-con">
+              <a href="#" class="main-btn">
+                <span class="btn-text">Download CV</span>
+                <span class="btn-icon"><i class="fas fa-download"></i></span>
+              </a>
+            </div>
           </div>
-          <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel </button>
-        </div>
-    </div>
-    </form>
-
-    </div>
-
-
-    <!------setting-------------------------------------------------------------------------------------------------------------------------------------->
-
-    <div id="Setting" class="tabcontent">
-      <h3>Setting</h3>
-      <div class="tab2">
-        <button class="tablinks2" onclick="opentab2(event, 'website')" id="defaultOpen2">Website setting</button>
-        <button class="tablinks2" onclick="opentab2(event, 'general')">General seeting</button>
-        <button class="tablinks2" onclick="opentab2(event, 'api')">API key</button>
-        <button class="tablinks2" onclick="opentab2(event, 'seo')">SEO</button>
-      </div>
-
-      <!------setting web-->
-
-      <div id="website" class="tabcontent2">
-
-        <form action="setting-web.php" class="form1">
-
-          <div class="row">
-            <div class="col-25">
-              <label for="langouge"> Languesge</label>
-            </div>
-            <div class="col-75">
-              <select name="languege" id="lang">
-                <option value="English">English</option>
-                <option value="French">French</option>
-              </select>
-            </div>
-            <div class="col-25">
-              <label for="title">Site title</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Stitel" placeholder="Site title">
-
-            </div>
-            <div class="col-25">
-              <label for="Email">Webmaster E-mail</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Wemail" placeholder="E-mail">
-            </div>
-            <div class="col-25">
-              <label for="imagebg">Home page background</label>
-            </div>
-            <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
-            </div>
-
-            <div class="col-25">
-              <label for="imagebg">About me image</label>
-            </div>
-            <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
-            </div>
-
-
-            <div class="col-25">
-              <label for="imagebg">contact page background</label>
-            </div>
-            <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
-            </div>
-
-
-            <div class="row">
-              <div class="col-25">
-                <label for="imagebg"></label>
+          <div class="right-about">
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">Web Servers / Databases</p>
+                <p class="small-text">
+                  Apache Tomcat, MySQL, SQL Server, phpMyAdmin, MongoDB
+                </p>
               </div>
-              <input type="submit" value="Save">
-              <button type="cancel" onclick=";">Cancel </button>
             </div>
-          </div>
-        </form>
-      </div>
-      <!------setting general-->
-
-      <div id="general" class="tabcontent2">
-        <form action="generalSetting.php" class="form1">
-          <div class="row">
-            <div class="col-25">
-              <label for="langouge"> Display About me</label>
-            </div>
-            <div class="col-75">
-              <input type="radio" id="yes" name="question" value="yes" />Yes
-              <input type="radio" id="no" name="question" value="no" />NO
-            </div>
-            <br><br><br>
-
-            <div class="col-25">
-              <label for="langouge"> Display Contact form</label>
-            </div>
-            <div class="col-75">
-              <input type="radio" id="yes" name="question" value="yes" />Yes
-              <input type="radio" id="no" name="question" value="no" />NO
-            </div>
-            <br><br><br>
-
-            <div class="col-25">
-              <label for="langouge"> Display Portfolio</label>
-            </div>
-            <div class="col-75">
-              <input type="radio" id="yes" name="question" value="yes" />Yes
-              <input type="radio" id="no" name="question" value="no" />NO
-            </div>
-            <br><br><br>
-
-            <div class="col-25">
-              <label for="langouge"> Display Resume</label>
-            </div>
-            <div class="col-75">
-              <input type="radio" id="yes" name="question" value="yes" />Yes
-              <input type="radio" id="no" name="question" value="no" />NO
-            </div>
-            <br><br><br>
-
-            <div class="col-25">
-              <label for="langouge"> Display Skills</label>
-            </div>
-            <div class="col-75">
-              <input type="radio" id="yes" name="question" value="yes" />Yes
-              <input type="radio" id="no" name="question" value="no" />NO
-            </div>
-            <br><br><br>
-
-
-
-
-            <div class="row">
-              <div class="col-25">
-                <label for="imagebg"></label>
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">Programming/ Technologies</p>
+                <p class="small-text">
+                  C, Java, PHP, AJAX, XML, JSON, JavaScript, TypeScript
+                </p>
               </div>
-              <input type="submit" value="Save">
-              <button type="cancel" onclick=";">Cancel</button>
             </div>
-          </div>
-        </form>
-      </div>
-
-      <!------setting api-->
-
-      <div id="api" class="tabcontent2">
-
-        <form action="api" class="form1">
-
-          <div class="row">
-
-            <div class="col-25">
-              <label for="api">Google map key</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Gapi" placeholder="API key">
-
-            </div>
-            <br><br><br><br>
-
-
-            <div class="row">
-              <div class="col-25">
-                <label for="api"></label>
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">Atlassian</p>
+                <p class="small-text">
+                  Jira Software, <br />Confluence, <br />Bitbucket
+                </p>
               </div>
-              <input type="submit" value="Save">
-              <button type="cancel" onclick=";">Cancel</button>
             </div>
-          </div>
-        </form>
-      </div>
-
-      <!------setting seo-->
-
-
-      <div id="seo" class="tabcontent2">
-        <form action="seo" class="form1">
-
-          <div class="row">
-
-            <div class="col-25">
-              <label for="api">Meta descriptaion</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="mDes" placeholder="Descraption">
-
-            </div>
-            <br><br><br><br>
-
-
-            <div class="row">
-              <div class="col-25">
-                <label for="api"></label>
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">Version control</p>
+                <p class="small-text">
+                  Git,<br />
+                  GitHub, <br />GitLab
+                </p>
               </div>
-              <input type="submit" value="Save">
-              <button type="cancel" onclick=";">Cancel</button>
             </div>
           </div>
-        </form>
+        </div>
+        <div class="about-stats">
+          <h4 class="stat-title">My Skills</h4>
+          <div class="progress-bars">
+            <div class="progress-bar">
+              <p class="prog-title">html5</p>
+              <div class="progress-con">
+                <p class="prog-text">90%</p>
+                <div class="progress">
+                  <span class="html"></span>
+                </div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <p class="prog-title">css3</p>
+              <div class="progress-con">
+                <p class="prog-text">95%</p>
+                <div class="progress">
+                  <span class="css"></span>
+                </div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <p class="prog-title">javascript</p>
+              <div class="progress-con">
+                <p class="prog-text">85%</p>
+                <div class="progress">
+                  <span class="js"></span>
+                </div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <p class="prog-title">ReactJS</p>
+              <div class="progress-con">
+                <p class="prog-text">85%</p>
+                <div class="progress">
+                  <span class="react"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="stat-title">My Timeline</h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="tl-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2022 - present</p>
+            <h5>Frontend Developer<span> - Argus Group</span></h5>
+            <p>
+              Create responsive UIs using latest frameworks, Collaborate with
+              web designers and UX designers to enhance the functionality and
+              user experience of web applications using React JS.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2019 - 2022</p>
+            <h5>Frontend Developer<span> - Tata Consultancy Services</span></h5>
+            <p>
+              Developed component designs that work cohesively in the context of
+              existing architecture and are scalable, maintainable using React,
+              PHP and JavaScript(ES6+).
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2018 - 2018</p>
+            <h5>Internship<span> - Engineers Hub</span></h5>
+            <p>
+              Created cross-browser compatible and standards-compliant CSS-based
+              page layouts.Performed quality assurance and unit testing which
+              involved creation, verification and validation of test cases.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <p class="tl-duration">2015 - 2019</p>
+            <h5>B.Tech<span> - RIET</span></h5>
+            <p>
+              Graduated with a Bachelors degree in Computer Science and
+              Engineering from Rajamahendri Institue of Engineering and
+              Technology.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="portfolio">
+        <div class="main-title">
+          <h2>My <span>Portfolio</span></h2>
+        </div>
+        <p class="port-text">
+          Here is some of my work that I've done in various programming
+          languages.
+        </p>
+        <div class="portfolios">
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt=""
+              />
+              <h5>TinDog</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Tindog"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://images.pexels.com/photos/38573/drummers-drums-soldiers-historic-38573.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt=""
+              />
+              <h5>Drum Kit</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Drum-Kit"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://camo.githubusercontent.com/76c3088697157a39a58a65a048827219b48f885f90f7deb508262622cfa654f7/68747470733a2f2f63616c65622d656c6c69732e6769746875622e696f2f6173736574732f696d672f73696d6f6e2e6a7067"
+                alt=""
+              />
+              <h5>Simon Game</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Simon-Game"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img src="img/port4.jpg" alt="" />
+              <h5>Frontend Components</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Frontend-components"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://images.pexels.com/photos/965879/pexels-photo-965879.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt=""
+              />
+              <h5>Dice Game</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Dice-game"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://images.pexels.com/photos/3894218/pexels-photo-3894218.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt=""
+              />
+              <h5>Guess-the-number</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Guess-the-number"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="https://imageio.forbes.com/blogs-images/forbestechcouncil/files/2019/01/canva-photo-editor-8-7.jpg?format=jpg&width=960"
+                alt=""
+              />
+              <h5>Leetcode Examples</h5>
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href="https://github.com/ManimeghanaV/Leetcode-Problems"
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container contact" id="contact">
+        <div class="contact-container">
+          <div class="main-title">
+            <h2>Contact <span>Me</span></h2>
+          </div>
+          <div class="contact-content-con">
+            <div class="left-contact">
+              <h4>Contact me here</h4>
+              <p>
+                I'm interested in Frontend development Opportunities- especially
+                ambitious or large projects. However if you have any other
+                request or question, don't hesitate to use the form.
+              </p>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location</span>
+                  </div>
+                  <p>: Ottawa, Canada</p>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                  </div>
+                  <p>
+                    <span>: v.manimeghana@gmail.com</span>
+                  </p>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Education</span>
+                  </div>
+                  <p>
+                    <span>: B.Tech,CSE</span>
+                  </p>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Mobile Number</span>
+                  </div>
+                  <p>
+                    <span>: +1 (613)-363-5552</span>
+                  </p>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">
+                    <i class="fas fa-globe-africa"></i>
+                    <span>Languages</span>
+                  </div>
+                  <p>
+                    <span>: English, Telugu, Hindi</span>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-icons">
+                <div class="contact-icon">
+                  <a
+                    href="https://www.linkedin.com/in/meghana-vudathu-073651166/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://github.com/ManimeghanaV" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="right-contact">
+              <form
+                action="mailto:v.maimeghana@gmail.com"
+                method="post"
+                enctype="text/plain"
+                class="contact-form"
+              >
+                <div class="input-control i-c-2">
+                  <input type="text" required placeholder="YOUR NAME" />
+                  <input type="email" required placeholder="YOUR EMAIL" />
+                </div>
+                <div class="input-control">
+                  <input type="text" required placeholder="ENTER SUBJECT" />
+                </div>
+                <div class="input-control">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="15"
+                    rows="8"
+                    placeholder="Message Here..."
+                  ></textarea>
+                </div>
+                <div class="submit-btn">
+                  <button class="myButton" type="submit">Submit</button>
+                  <a
+                    href="./Resume/Manimeghana Vudathu Resume.pdf"
+                    download="Manimeghana Resume"
+                    class="main-btn"
+                  >
+                    <span class="btn-text">Download CV</span>
+                    <span class="btn-icon"
+                      ><i class="fas fa-download"></i
+                    ></span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="controls">
+      <div class="control active-btn" data-id="home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="control" data-id="about">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="control" data-id="portfolio">
+        <i class="fas fa-briefcase"></i>
       </div>
 
-    </div>
-
-
-
-    <!----about me about me tab------------------------------------------------------------------------------------------------------------------------------->
-
-    <div id="AboutMe" class="tabcontent">
-      <h3>About me</h3>
-
-
-
-      <div class="tab3">
-        <button class="tablinks3" onclick="opentab3(event, 'Aboutme')" id="defaultOpen3">About me</button>
-        <button class="tablinks3" onclick="opentab3(event, 'Contact')">Contact information</button>
-        <button class="tablinks3" onclick="opentab3(event, 'Social')">Social media Links</button>
+      <div class="control" data-id="contact">
+        <i class="fas fa-envelope-open"></i>
       </div>
 
-      <div id="Aboutme" class="tabcontent3">
-
-
-        <form method="post" id='aboutMeForm' class="form1">
-
-          <div class="row">
-            <div class="col-25">
-              <label for="Aboutme">About me</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="NameAbout" placeholder="Name ">
-
-            </div>
-            <div class="col-25">
-              <label for="About-text">About me</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Aboutme2" placeholder="text">
-            </div>
-            <div class="col-25">
-              <label for="imageAbout">image</label>
-            </div>
-            <div class="col-75">
-              <input type="file" id='imageAbout' width="100%" height="auto">
-            </div>
-
-            <div class="col-25">
-              <label for="cv">Resume</label>
-            </div>
-            <div class="col-75">
-              <input type="file" id='cv' width="100%" height="auto">
-            </div>
-
-
-            <div class="row">
-              <input type="submit" value="Save">
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <!----about me contact information tab-->
-      <div id="Contact" class="tabcontent3">
-
-
-        <form method="post" id="contactForm" class="form1">
-
-          <div class="row">
-            <div class="col-25">
-              <label for="address">Address</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="address" placeholder="Adresse ">
-
-            </div>
-            <div class="col-25">
-              <label for="location">Location</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="location" placeholder="Location">
-            </div>
-            <div class="col-25">
-              <label for="phone">Phone Number</label>
-            </div>
-            <div class="col-75">
-              <input type="tel" id="phone" placeholder="Phone number">
-            </div>
-
-            <div class="col-25">
-              <label for="email">E-mail</label>
-            </div>
-            <div class="col-75">
-              <input type="email" id="email" placeholder="Email">
-            </div>
-
-
-
-            <div class="row">
-              <input type="submit" value="Save">
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <!----about me social tab-->
-      <div id="Social" class="tabcontent3">
-
-
-        <form method="post" id="socialForm" class="form1">
-
-          <div class="row">
-            <div class="col-25">
-              <label for="socialName">Social Media Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="socialName" placeholder="Social Media Name">
-            </div>
-
-            <div class="col-25">
-              <label for="socialLink">Social Media Link</label>
-            </div>
-            <div class="col-75">
-              <input type="url" id="socialLink" placeholder="https://">
-            </div>
-
-
-            <div class="row">
-              <input type="submit" value="Save">
-            </div>
-          </div>
-        </form>
+      <div class="control" data-id="contact">
+        <a href="./login.html"><i class="fas fa-sign-in-alt"></i></a>
       </div>
     </div>
-
-
-    <!----education------------------------------------------------------------------------------------------------------------------------------------------->
-
-
-    <div id="Education" class="tabcontent">
-      <h3>Education</h3>
-      <div class="tab4">
-
-        <form method="post" id="educationForm" class="form1">
-
-          <div class="row">
-            <div class="col-25" style="margin-right:1em ;">
-              <label for="school">School/Univercity</label>
-              <input type="text" id="school" placeholder="School/Univercity">
-            </div>
-
-            <div class="col-25" style="margin-right:1em ;">
-              <label for="fieldOfStudy">field Of Study</label>
-              <input type="text" id="fieldOfStudy" placeholder="field Of Study">
-            </div>
-
-            <div class="col-25" style="margin-right:1em ;">
-              <label for="degree">Degree</label>
-              <input type="text" id="degree" placeholder="Degree">
-            </div>
-
-          </div>
-        <br>
-         <hr>
-          <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
-            </div>
-            <input type="submit" value="Save">
-          </div>
-      </div>
-      </form>
+    <div class="theme-btn">
+      <i class="fas fa-adjust"></i>
     </div>
-    </div>
-
-
-    <!----skill------------------------------------------------------------------------------------------------>
-
-
-
-
-    <div id="Skills" class="tabcontent">
-      <h3>Skills</h3>
-      <div class="tab5">
-        <form method="post" id='skillsForm' class="form1">
-          <div class="row">
-            <div class="col-25" style="margin-right:1em;">
-              <label for="skill">Skill</label>
-              <input type="text" id="skill" placeholder="Skill">
-            </div>
-
-
-            <div class="col-25" style="margin-right:1em;">
-              <label for="per">Percentage</label>
-              <input type="text" id="per" placeholder="100%">
-            </div>
-
-          </div>
-          <br>
-          <hr>
-
-
-
-          <div class="row">
-            <input type="submit" value="Save">
-          </div>
-      </div>
-      </form>
-
-
-
-    </div>
-    </div>
-
-    <!----experiance------------------------------------------------------------------------------------------------>
-
-
-    <div id="Experiance" class="tabcontent">
-      <h3>Experiance</h3>
-      <div class="tab6">
-
-
-
-        <form method="post" class="form1" id="experienceForm">
-
-          <div class="row">
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="company">Company</label>
-              <input type="text" id="company" placeholder="company">
-            </div>
-
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="position">Position</label>
-              <input type="text" id="position" placeholder="position">
-            </div>
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="startDate">From</label>
-              <input type="text" id="startDate" placeholder="YYYY/MM/DD">
-            </div>
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="endDate">to</label>
-              <input type="text" id="endDate" placeholder="YYYY/MM/DD">
-            </div>
-
-          </div>
-          <br>
-          <hr>
-
-          <div class="row">
-            <div class="col-75">
-              <label for="imagebg"></label>
-            </div>
-            <input type="submit" value="Save">
-          </div>
-      </div>
-      </form>
-
-
-    </div>
-
-    </div>
-
-
-    <!----project------------------------------------------------------------------------------------------------>
-
-
-    <div id="Project" class="tabcontent">
-      <h3>Experiance</h3>
-      <div class="tab7">
-
-
-
-        <form method="post" id='projectsForm' class="form1">
-
-          <div class="row">
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="projectName">Project</label>
-              <input type="text" id="projectName" placeholder="Title">
-            </div>
-
-
-            <div class="col-20" style="margin-right:.5em ;">
-              <label for="projectLink">Project Link</label>
-              <input type="text" id="projectLink" placeholder="project Link">
-            </div>
-
-            <div class="col-20">
-              <label for="projectImage">Image</label>
-                <input type="file" id="projectImage" >
-            </div>
-
-          </div>
-          <br>
-          <hr>
-
-          <div class="row">
-            <input type="submit" value="Save">
-          </div>
-      </div>
-      </form>
-
-
-    </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-  </main>
-
-
-
-
-
-
-
-
-
-  <script src="app.js"></script>
-
-
-
-
-
-
-
-  <script>
-    function opentab(evt, table) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(table).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>
-
-  <!--second part-->
-
-  <script>
-    function opentab2(evt, table2) {
-      var i, tabcontent2, tablinks2;
-      tabcontent2 = document.getElementsByClassName("tabcontent2");
-      for (i = 0; i < tabcontent2.length; i++) {
-        tabcontent2[i].style.display = "none";
-      }
-      tablinks2 = document.getElementsByClassName("tablinks2");
-      for (i = 0; i < tablinks2.length; i++) {
-        tablinks2[i].className = tablinks2[i].className.replace(" active", "");
-      }
-      document.getElementById(table2).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-    document.getElementById("defaultOpen2").click();
-  </script>
-
-
-
-  <!--about me-->
-
-  <script>
-    function opentab3(evt, table3) {
-      var i, tabcontent3, tablinks3;
-      tabcontent3 = document.getElementsByClassName("tabcontent3");
-      for (i = 0; i < tabcontent3.length; i++) {
-        tabcontent3[i].style.display = "none";
-      }
-      tablinks3 = document.getElementsByClassName("tablinks3");
-      for (i = 0; i < tablinks3.length; i++) {
-        tablinks3[i].className = tablinks3[i].className.replace(" active", "");
-      }
-      document.getElementById(table3).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-    document.getElementById("defaultOpen3").click();
-  </script>
-
-
-
-
-  <!--education-->
-
-  <script>
-    function opentab4(evt, table4) {
-      var i, tabcontent4, tablinks4;
-      tabcontent4 = document.getElementsByClassName("tabcontent4");
-      for (i = 0; i < tabcontent4.length; i++) {
-        tabcontent4[i].style.display = "none";
-      }
-      tablinks4 = document.getElementsByClassName("tablinks4");
-      for (i = 0; i < tablinks4.length; i++) {
-        tablinks4[i].className = tablinks4[i].className.replace(" active", "");
-      }
-      document.getElementById(table4).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-  </script>
-
-
-  <!--imag file-->
-
-  <script>
-//   function previewFile() {
-//   var preview = document.querySelector('img');
-//   var file    = document.querySelector('input[type=file]').files[0];
-//   var reader  = new FileReader();
-
-//   reader.onloadend = function () {
-//     preview.src = reader.result;
-//   }
-
-//   if (file) {
-//     reader.readAsDataURL(file);
-//   } else {
-//     preview.src = "";
-//   }
-// }
-  </script>
-
-  <!---add remove-->
-  <script>
-    var count = 1;
-    $("#btn").click(function () {
-
-      $("#container").append(addNewRow(count));
-      count++;
-
-    });
-
-    function addNewRow(count) {
-      var newrow = '<div class="row">' +
-        '<div class="col-25">' +
-        '<label for="school">Act ' + count + '</label>' +
-        '<input type="text" id="school" v-model="act" >' +
-        '</div>' +
-        '</div>' +
-        '<div class="row">' +
-        '<div class="col-25">' +
-        '<label for="school">Act ' + count + '</label>' +
-        '<input type="text" id="school" v-model="act" >' +
-        '</div>' +
-        '</div>' +
-        '<div class="row">' +
-        '<div class="col-25">' +
-        '<label for="school">Act ' + count + '</label>' +
-        '<input type="text" id="school" v-model="act" >' +
-        '</div>' +
-        '</div>';
-      return newrow;
-    }
-  </script>
-
-
-
-
-
-
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
