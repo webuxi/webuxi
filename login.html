@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkrel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet"/>
+      
+      <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+      <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+      <script defer src="./login.js"></script>
+  </head>
+  
+  <body class="main-content">
+    <header class="container header active" id="home">
+      <div class="header-content">
+        <div class="left-header">
+          <div class="h-shape"></div>
+          
+         </div>
+        
+        <div class="right-header">
+          <div id="log-box"> 
+            <i class="fa-solid fa-circle-user"></i>
+            <h4>Login</h4>
+            <form id='form' class="login" action="/" method="post">
+              <input type="text" placeholder="User name" id="user" name="user">
+              <input type="password" placeholder="Password" id="password">
+              <button  type="submit" id="btn" value="Login"><i class="fa-solid fa-unlock"></i>Login</button>
+            </form>
+          </div>
+       
+          
+
+          </div>
+
+        </div>
+    </header>
+    <main>
+      
+    
+  </body>
+
+
+  <!--validation for empty field-->   
+
+  <!-- <script>
+    function validdation()
+    {
+      var id=document.f1.user.value;
+      var ps=document.f1.pass.value;
+      if(id.length==""&&ps.length=="") {
+        alert("User Name and Password fields are empty");
+        return false;
+
+      }
+      else {
+        if(id.length=="") {
+          alert("User Name is empty");
+          return false;
+        }
+        if(ps.length=="") {
+          alert("Password field is empty");
+          return false;
+        }
+      }
+    }
+  </script> -->
+</html>

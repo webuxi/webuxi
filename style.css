@@ -556,89 +556,6 @@ body.shrink .tooltip {
   }
 
 
-  
-  /*------Skill------*/
-
-  .tab5 {
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-  
- 
-  .tab5 button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    border: 1px #c79a46 solid;
-  }
-  
-  
-  .tab5 button:hover {
-    background-color: #f1f1d2fd;
-  }
-  
- 
-  .tab5 button.active {
-    background-color: #ccc;
-    border-bottom: none;
-    background-color: #f1f1f1;
-    width: 15em;
-  }
-  
-  
-  .tabcontent5 {
-    display: none;
-    padding: 0em .1em;
-   
-  }
-
-
-  
-  /*------experiance------*/
-
-  .tab6 {
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-  
- 
-  .tab6 button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    border: 1px #c79a46 solid;
-  }
-  
-  
-  .tab6 button:hover {
-    background-color: #f1f1d2fd;
-  }
-  
- 
-  .tab6 button.active {
-    background-color: #ccc;
-    border-bottom: none;
-    background-color: #f1f1f1;
-    width: 15em;
-  }
-  
-  
-  .tabcontent6 {
-    display: none;
-    padding: 0em .1em;
-   
-  }
-
   /*-----------*/
   main{
     background-color: #fff;
@@ -729,9 +646,9 @@ body.shrink .tooltip {
 
   #dashbord{
     width: 100%;
-    height: 50%;
+    height: 70%;
     border: #A5C9CA .5px solid;
-    border-radius: 1em;
+    border-radius: 2em;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr 1fr;
@@ -739,28 +656,17 @@ body.shrink .tooltip {
     align-items: center;
     padding: 2.5em;
     text-align: center;
-    background-color: #395B64;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    background-color: #f1f1f1;
   }
   .dash{
     width: 90%;
     height: 90%;
-    border: #395B64 .5px solid;
+    border: #A5C9CA .5px solid;
     border-radius: .5em;
     margin-left: 1em;
     padding: 1em;
     background-color:#fff;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
-
-  .dash a{
-    color: #395B64;
-    font-size: 1.9em;
-    font-weight: 800;
-    float: left;
-    cursor: pointer;
-      }
   .btndanger{
     background-color:#fff;
     color: red;
@@ -771,19 +677,11 @@ body.shrink .tooltip {
   }
   #btn {
   margin-top: 1.5em;
-  margin-left: 1em;
+  margin-left: 2em;
   background-color: #fff;
-  border-radius: .5em;
+  border-radius: 1em;
   color: #000;
   }
-
-  button #btn2 {
-    margin-top: 1.5em;
-    margin-left: 1em;
-    background-color: #fff;
-    border-radius: .5em;
-    color: #000;
-    }
   .cancel {
     margin-top: 1.5em;
     height: 4em;
@@ -791,4 +689,5 @@ body.shrink .tooltip {
     background-color: #fff;
     border-radius: .5em;
     color: #000;
-        }
+    
+    }
