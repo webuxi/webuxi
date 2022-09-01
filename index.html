@@ -29,7 +29,7 @@
       </button>
     </div>
 
-     <!-----sidbar-->
+     <!-----sidbar----------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="sidebar-links">
       <ul>
@@ -43,6 +43,7 @@
            </button>
           </a>
         </li>
+
         <li class="tooltip-element" data-tooltip="1">
           <a href="#" data-active="1">
             <div class="icon">
@@ -52,6 +53,7 @@
             </button>
            </a>
         </li>
+
         <li class="tooltip-element" data-tooltip="1">
           <a href="#" data-active="1">
             <div class="icon">
@@ -61,6 +63,7 @@
            </button>
           </a>
         </li>
+
         <li class="tooltip-element" data-tooltip="1">
           <a href="#" data-active="1">
             <div class="icon">
@@ -78,7 +81,7 @@
             <div class="icon">
               <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
-            <button class="tablinks" onclick="opentab(event, 'Skills')"><span class="link hide">Skills</span>
+            <button class="tablinks" onclick="opentab(event, 'Skills')"> <span class="link hide">Skills</span>
             </button>
 
           </a>
@@ -96,7 +99,8 @@
 
           </a>
         </li>
-        <li class="tooltip-element" data-tooltip="2">
+
+        <li class="tooltip-element" data-tooltip="1">
           <a href="#" data-active="2">
             <div class="icon">
               <i class="fa-solid fa-users-gear"></i>
@@ -106,27 +110,14 @@
 
           </a>
         </li>
-        <li class="tooltip-element" data-tooltip="3">
-          <a href="#" data-active="3">
-            <div class="icon">
-              <i class="fa-solid fa-message"></i>
-            </div>
-            <button class="tablinks" onclick="opentab(event, 'Message')"><span class="link hide">Message</span>
-            </button>
-
-          </a>
-        </li>
+       
         
       </ul>
 
-
-    
     </div>
 
     <div class="sidebar-footer">
-      <a href="#" class="account tooltip-element" data-tooltip="0">
-        <i class='bx bx-user'></i>
-      </a>
+     
       
         <a href="#" class="log-out">
           <i class='bx bx-log-out'></i>
@@ -141,46 +132,36 @@
 
 </div>
 
-     <!------Dashbord-->
+     <!------Dashbord---------------------------------------------------------------------------------------------------------------------------------------------->
 
   <main>
     <div id="Dashbord" class="tabcontent">
-      <a href="/login.html">login</a>
-      <button type='button' class="btn-test">test</button>
       <h3>Dashbord</h3>
      
       <div id="dashbord">
-
-      <div class="dash">
-        
-      </div>
-      <div class="dash">2</div>
-      <div class="dash">3</div>
-      <div class="dash">4</div>
-      <div class="dash">5</div>
-      <div class="dash">6</div>
-
-
+      
+       <div class="dash" style="background-image:url(img/view.png) ; background-size: cover; background-position: center;";>
+        <a href=""></a> </div>
+           <div class="dash" style="background-image:url(img/mail.png) ; background-size: cover; background-position: center;";>
+        <a href=""></a></div>
+          <div class="dash" style="background-image:url(img/chart.png) ; background-size: cover; background-position: center;";></div>
       </div>
      
-       
     </div>
-         <!------profil-->
+<!------profil--------------------------------------------------------------------------------------------------------------------------------->
     <div id="Profil" class="tabcontent">
       <h3>Profil</h3>
       <hr>
-      
         <form action="profile.php" class="form1">
 
-        <div class="row">
-         
-          <div class="col-25">
-        <label for="UserName">User Name</label>
+         <div class="row">
+         <div class="col-25">
+         <label for="UserName">User Name</label>
           </div>
-        <div class="col-75">
-        <input type="text" id="Uname" placeholder="User name">
+         <div class="col-75">
+         <input type="text" id="Uname" placeholder="User name">
       
-        </div>
+         </div>
         <div class="col-25">
         <label for="Email">E-mail</label>
       </div>
@@ -195,11 +176,7 @@
   <div class="col-75">
     <input type="text" id="pass" placeholder="Password">
   </div>
-      
-
-         
-
-
+    
         <div class="row">
           <div class="col-25">
             <label for="imagebg"></label>
@@ -210,13 +187,10 @@
       </div>
       </form>
 
-     
-
-
     </div>
 
 
-      <!------setting-->
+      <!------setting-------------------------------------------------------------------------------------------------------------------------------------->
     
     <div id="Setting" class="tabcontent">
       <h3>Setting</h3>
@@ -231,8 +205,7 @@
 
       <div id="website" class="tabcontent2">
         
-        
-        <form action="setting-web.php" class="form1">
+           <form action="setting-web.php" class="form1">
 
           <div class="row">
             <div class="col-25">
@@ -415,7 +388,7 @@
 
    
 
-    <!----about me about me tab---------------------------------------------------------------------------------------------------------->
+    <!----about me about me tab------------------------------------------------------------------------------------------------------------------------------->
 
     <div id="AboutMe" class="tabcontent">
       <h3>About me</h3>
@@ -569,116 +542,221 @@
   </div>
 
 
-    <!----education------------------------------------------------------------------------------------------------>
+    <!----education------------------------------------------------------------------------------------------------------------------------------------------->
 
     
     <div id="Education" class="tabcontent">
-      <h3>education</h3>
-      <hr>
-        <div class="tab4">
-         
+           <h3>Education</h3>
+      <div class="tab4">
 
-
-          <form action="education.php" class="form1">
+        <form action="education.php" class="form1">
            
-            <div class="row">
-              
-            <div class="col-25"  style="margin-right:2em ;">
+          <div class="row">
+            <div class="col-25"  style="margin-right:1em ;">
             <label for="school">School/Univercity</label>
             <input type="text" id="school" placeholder="School/Univercity">
             </div>
 
-            <div class="col-25"  style="margin-right:2em ;">
+            <div class="col-25"  style="margin-right:1em ;">
             <label for="filed">Filed</label>
             <input type="text" id="filed" placeholder="Filed">
             </div>
 
-            <div class="col-25" style="margin-right:2em ;">
+            <div class="col-25" style="margin-right:1em ;">
             <label for="degree">Degree</label>
             <input type="text" id="degree" placeholder="Degree">
             </div>
             
 
             <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-            <button id="btn">Add row</button>
-              </div>
+            <button id="btn">Add</button>
+          </div>
            
   
   
-            <div class="row">
-              <div class="col-25">
-                <label for="imagebg"></label>
-               </div>
-               <input type="submit" value="Save">
-               <button type="cancel" class="cancel" onclick=";">Cancel </button>
-            </div>
-          </div>
-          </form>
-
-
-
-      </div>
-
-  <!------setting web-->
-
-      
-    <!----education------------------------------------------------------------------------------------------------>
-
-    
-    <div id="Skills" class="tabcontent5">
-      <h3>Skills</h3>
-      <hr>
-        <div class="tab5">
          
-
-
-          <form action="skill.php" class="form1">
-           
-            <div class="row">
-              
-            <div class="col-25"  style="margin-right:2em ;">
-            <label for="skill">Skill</label>
-            <input type="text" id="skill" placeholder="skill">
-            </div>
-
-            
-
-            <div class="col-25" style="margin-right:2em ;">
-            <label for="per">Percentage</label>
-            <input type="text" id="per" placeholder="Percentage">
-            </div>
-            
-
-            <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-            <button id="btn">Add row</button>
-              </div>
-           
-  
-  
-            <div class="row">
-              <div class="col-25">
-                <label for="imagebg"></label>
-               </div>
-               <input type="submit" value="Save">
-               <button type="cancel" class="cancel" onclick=";">Cancel </button>
-            </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="imagebg"></label>
+             </div>
+          <input type="submit" value="Save">
+          <button type="cancel" onclick=";" style="background-color:#395B64;">Cancel </button>
           </div>
-          </form>
-
-
-
+        </div>
+        </form>
       </div>
+  </div>
+
       
+    <!----skill------------------------------------------------------------------------------------------------>
+
+     
+
+        
+<div id="Skills" class="tabcontent">
+  <h3>Skills</h3>
+<div class="tab5">
+  <form action="skill.php" class="form1">
+      <div class="row">
+       <div class="col-25"  style="margin-right:1em;">
+        <label for="skill">Skill</label>
+        <input type="text" id="Skill" placeholder="Skill">
+        </div>
+
+       
+        <div class="col-25" style="margin-right:1em;">
+        <label for="per">Percentage</label>
+        <input type="text" id="per" placeholder="100%">
+        </div>
+        
+
+        
+        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
+        <button id="btn">Add</button>
+          </div>
+       <br>
+     <hr>
+       
 
 
-
-
-
-
+          <div class="row">
+            <div class="col-25">
+              <label for="imagebg"></label>
+            </div>
+             <input type="submit" value="Save">
+             <button type="cancel" class="cancel" onclick=";">Cancel </button>
+            </div>
+        </div>
+      </form>
 
 
 
     </div>
+  </div>
+
+<!----experiance------------------------------------------------------------------------------------------------>
+
+
+<div id="Experiance" class="tabcontent">
+  <h3>Experiance</h3>
+    <div class="tab6">
+     
+
+
+      <form action="skill.php" class="form1">
+       
+        <div class="row">
+          
+        <div class="col-20"  style="margin-right:.5em ;">
+        <label for="company">Company</label>
+        <input type="text" id="company" placeholder="company">
+        </div>
+
+       
+        <div class="col-20" style="margin-right:.5em ;">
+        <label for="position">Position</label>
+        <input type="text" id="position" placeholder="position">
+        </div>
+
+        <div class="col-20" style="margin-right:.5em ;">
+          <label for="start">From</label>
+          <input type="text" id="start" placeholder="YYYY/MM/DD">
+          </div>
+
+          <div class="col-20" style="margin-right:.5em ;">
+            <label for="end">to</label>
+            <input type="text" id="to" placeholder="YYYY/MM/DD">
+            </div>
+        
+
+        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
+        <button id="btn">Add</button>
+          </div>
+       <br>
+     <hr>
+
+        <div class="row">
+          <div class="col-75">
+            <label for="imagebg"></label>
+           </div>
+           <input type="submit" value="Save">
+           <button type="cancel" class="cancel" onclick=";">Cancel </button>
+        </div>
+      </div>
+      </form>
+
+
+  </div>
+
+</div>
+    
+
+<!----project------------------------------------------------------------------------------------------------>
+
+
+<div id="Project" class="tabcontent">
+  <h3>Experiance</h3>
+    <div class="tab7">
+     
+
+
+      <form action="project.php" class="form1">
+       
+        <div class="row">
+          
+        <div class="col-20"  style="margin-right:.5em ;">
+        <label for="p1">Project</label>
+        <input type="text" id="p1" placeholder="Title">
+        </div>
+
+       
+        <div class="col-20" style="margin-right:.5em ;">
+        <label for="exp1">Position</label>
+        <input type="text" id="exp1" placeholder="Descraption">
+        </div>
+
+        <div class="col-20" style="margin-right:.5em ;">
+          <label for="start">From</label>
+          <input type="text" id="start" placeholder="YYYY/MM/DD">
+          </div>
+
+          <div class="col-20" style="margin-right:.5em ;">
+            <label for="end">to</label>
+            <input type="text" id="to" placeholder="YYYY/MM/DD">
+            </div>
+        
+
+        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
+        <button id="btn">Add</button>
+          </div>
+       <br>
+     <hr>
+
+        <div class="row">
+          <div class="col-75">
+            <label for="imagebg"></label>
+           </div>
+           <input type="submit" value="Save">
+           <button type="cancel" class="cancel" onclick=";">Cancel </button>
+        </div>
+      </div>
+      </form>
+
+    
+  </div>
+
+</div>
+    
+
+
+
+
+
+
+
+
+
+
   </main>
 
 
