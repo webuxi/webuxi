@@ -11,9 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
-  
-  <script defer type="module" src="./firebaseConfig.js"></script>
-  <script defer type="module" src="./index.js"></script>
 </head>
 
 <body>
@@ -135,7 +132,7 @@
      <!------Dashbord---------------------------------------------------------------------------------------------------------------------------------------------->
 
   <main>
-    <div id="Dashbord" class="tabcontent">
+    <div id="Dashbord" class="tabcontent"  style=" height: 100vh;">
       <h3>Dashbord</h3>
      
       <div id="dashbord">
@@ -178,11 +175,11 @@
   </div>
     
         <div class="row">
-          <div class="col-25">
-            <label for="imagebg"></label>
+          <div class="col-75">
+            <label for=""></label>
            </div>
         <input type="submit" value="Save">
-        <button type="cancel" onclick=";">Cancel </button>
+        
         </div>
       </div>
       </form>
@@ -251,13 +248,13 @@
             <input type="file" onchange="previewFile()" width="100%" height="auto">
            </div>
 
-
+           <br><hr>
           <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel </button>
+          
           </div>
         </div>
         </form>
@@ -313,14 +310,14 @@
         <br><br><br>
 
 
-          
+        <br><hr>
 
           <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel</button>
+          
           </div>
         </div>
         </form>
@@ -342,14 +339,14 @@
         
           </div>
           <br><br><br><br>
-
+          <br><hr>
 
           <div class="row">
-            <div class="col-25">
-              <label for="api"></label>
+            <div class="col-75">
+              <label for=""></label>
                 </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel</button>
+          
           </div>
         </div>
         </form>
@@ -372,13 +369,13 @@
           </div>
           <br><br><br><br>
 
-
+          <br><hr>
           <div class="row">
-            <div class="col-25">
-              <label for="api"></label>
+            <div class="col-75">
+              <label for=""></label>
                 </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel</button>
+          
           </div>
         </div>
         </form>
@@ -404,7 +401,7 @@
       <div id="Aboutme" class="tabcontent3">
         
         
-        <form method="post" id='aboutMeForm' class="form1">
+        <form action="aboutme.php" class="form1">
 
           <div class="row">
           <div class="col-25">
@@ -424,23 +421,23 @@
            <label for="imageAbout">image</label>
           </div>
           <div class="col-75">
-           <input type="file" id='imageAbout' width="100%" height="auto">
+           <input type="file" onchange="previewFile()" width="100%" height="auto">
           </div>
 
           <div class="col-25">
             <label for="cv">Resume</label>
            </div>
            <div class="col-75">
-            <input type="file" id='cv' width="100%" height="auto">
+            <input type="file" onchange="previewFile()" width="100%" height="auto">
            </div>
 
-
+           <br><br><hr>
             <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel </button>
+          
           </div>
         </div>
         </form>
@@ -480,14 +477,14 @@
           <input type="text" id="email" placeholder="Email">
         </div>
         
-
+        <br><hr>
 
             <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel </button>
+          
           </div>
         </div>
         </form>
@@ -527,14 +524,14 @@
           <input type="text" id="Github" placeholder="//https:">
         </div>
         
-
+        <br><hr>
 
             <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";">Cancel </button>
+          
           </div>
         </div>
         </form>
@@ -568,19 +565,19 @@
             </div>
             
 
-            <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
+            <button name="del0" class='btndanger'><span aria-hidden="true">X</span></button>
             <button id="btn">Add</button>
           </div>
            
-  
+           <br><hr>
   
          
           <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
              </div>
           <input type="submit" value="Save">
-          <button type="cancel" onclick=";" style="background-color:#395B64;">Cancel </button>
+          
           </div>
         </div>
         </form>
@@ -611,7 +608,7 @@
         
 
         
-        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
+        <button name="del0" class='btndanger'><span aria-hidden="true">X</span></button>
         <button id="btn">Add</button>
           </div>
        <br>
@@ -620,11 +617,11 @@
 
 
           <div class="row">
-            <div class="col-25">
-              <label for="imagebg"></label>
+            <div class="col-75">
+              <label for=""></label>
             </div>
              <input type="submit" value="Save">
-             <button type="cancel" class="cancel" onclick=";">Cancel </button>
+             
             </div>
         </div>
       </form>
@@ -669,18 +666,18 @@
             </div>
         
 
-        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-        <button id="btn">Add</button>
-          </div>
-       <br>
-     <hr>
+            <button name="del0" class='btndanger' style="border:none ;"><span aria-hidden="true">X</span></button>
+            <button id="btn" style="border:none ;">Add</button>
+              </div>
+           <br>
+         <hr>
 
         <div class="row">
           <div class="col-75">
-            <label for="imagebg"></label>
+            <label for=""></label>
            </div>
            <input type="submit" value="Save">
-           <button type="cancel" class="cancel" onclick=";">Cancel </button>
+           
         </div>
       </div>
       </form>
@@ -695,67 +692,53 @@
 
 
 <div id="Project" class="tabcontent">
-  <h3>Experiance</h3>
+  <h3>Project</h3>
     <div class="tab7">
      
 
-
       <form action="project.php" class="form1">
-       
-        <div class="row">
-          
-        <div class="col-20"  style="margin-right:.5em ;">
-        <label for="p1">Project</label>
-        <input type="text" id="p1" placeholder="Title">
-        </div>
-
-       
-        <div class="col-20" style="margin-right:.5em ;">
-        <label for="exp1">Position</label>
-        <input type="text" id="exp1" placeholder="Descraption">
-        </div>
-
-        <div class="col-20" style="margin-right:.5em ;">
-          <label for="start">From</label>
-          <input type="text" id="start" placeholder="YYYY/MM/DD">
-          </div>
-
-          <div class="col-20" style="margin-right:.5em ;">
-            <label for="end">to</label>
-            <input type="text" id="to" placeholder="YYYY/MM/DD">
+       <div class="row">
+            
+            <div class="col-25">
+          <label for="project title">Project title</label>
             </div>
-        
-
-        <button name="del0" class='btndanger'><span aria-hidden="true">×</span></button>
-        <button id="btn">Add</button>
-          </div>
-       <br>
-     <hr>
-
-        <div class="row">
           <div class="col-75">
-            <label for="imagebg"></label>
-           </div>
-           <input type="submit" value="Save">
-           <button type="cancel" class="cancel" onclick=";">Cancel </button>
+          <input type="text" id="Ptitel" placeholder=" title">
+        
+          </div>
+          <div class="col-25">
+          <label for="descriptaion">Descraption</label>
         </div>
+        <div class="col-75">
+          <input type="text" id="Pdes" placeholder="descriptaion">
+        </div>
+        <div class="col-25">
+           <label for="imag project"> Image</label>
+          </div>
+          <div class="col-25">
+           <input type="file" onchange="previewFile()" width="100%" height="auto" >
+          </div>
+
+          
+          
+          
+          <button name="del0" class='btndanger' style="border:none ; margin-left:3em;"><span aria-hidden="true">X</span></button>
+          <button id="btn" style="border:none ;">Add</button>
+            </div>
+         <br>
+       <hr>
+           
+
+          <div class="row">
+            <div class="col-75">
+              <label for=""></label>
+             </div>
+          <input type="submit" value="Save">
+          
+          </div>
+        </div>
+        </form>
       </div>
-      </form>
-
-    
-  </div>
-
-</div>
-    
-
-
-
-
-
-
-
-
-
 
   </main>
 
@@ -862,21 +845,21 @@
   <!--imag file--> 
 
 <script>
-//   function previewFile() {
-//   var preview = document.querySelector('img');
-//   var file    = document.querySelector('input[type=file]').files[0];
-//   var reader  = new FileReader();
+  function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
 
-//   reader.onloadend = function () {
-//     preview.src = reader.result;
-//   }
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
 
-//   if (file) {
-//     reader.readAsDataURL(file);
-//   } else {
-//     preview.src = "";
-//   }
-// }
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
 </script>
 
 <!---add remove-->
