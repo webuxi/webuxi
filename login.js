@@ -1,13 +1,13 @@
 
 // Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyCoixMu7gJXEbnKGKwlpoW4UlnsWI8oYmQ",
-	authDomain: "portfolio-site4u.firebaseapp.com",
-	projectId: "portfolio-site4u",
-	storageBucket: "portfolio-site4u.appspot.com",
-	messagingSenderId: "168326222731",
-	appId: "1:168326222731:web:c4badb2b3601a8c4c1d58e",
-	measurementId: "G-44G9LRSGJZ"
+	apiKey: "",
+	authDomain: "",
+	projectId: "",
+	storageBucket: "",
+	messagingSenderId: "",
+	appId: "",
+	measurementId: ""
 };
 
 // Initialize Firebase
