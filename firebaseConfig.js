@@ -3,7 +3,9 @@ import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/fir
 import { getFirestore, collection, setDoc, doc, addDoc, getDoc, getDocs } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-storage.js"
 // Firebase configuration
-
+const firebaseConfig = {
+	
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

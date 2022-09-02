@@ -39,8 +39,6 @@ const home = document.querySelector("#home");
 		home.innerHTML = `<div class="header-content">No Content</di>` ;
 	}
 
-
-	
 	// Get Skills list
 	const skillsRef = collection(db, 'skills');
 	const skillsDoc = await getDocs(skillsRef);
@@ -151,15 +149,54 @@ if (aboutData.exists()) {
 	aboutMe.innerHTML = `<div class="header-content">No Content</di>` ;
 }
 
-{/* <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-user-graduate"></i>
+// Get Projects Section Data
+const projects = document.querySelector("#portfolio");
+const projectsRef = collection(db, 'projects');
+const projectsDoc = await getDocs(projectsRef);
+
+const projectsList = () => {
+	let projects = '';
+	projectsDoc.forEach((doc) => {
+		const { projectName, projectImage, projectLink } = doc.data();
+		projects += `
+		<div class="portfolio-item">
+            <div class="image">
+              <img
+                src=${projectImage}
+                alt="project"
+              />
+              <h5>${projectName}</h5>
             </div>
-            <p class="tl-duration">2015 - 2019</p>
-            <h5>B.Tech<span> - RIET</span></h5>
-            <p>
-              Graduated with a Bachelors degree in Computer Science and
-              Engineering from Rajamahendri Institue of Engineering and
-              Technology.
-            </p>
-          </div> */}
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a
+                  href=${projectLink}
+                  class="icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+		`;
+	});
+	return projects;
+};
+
+if(projectsDoc.size > 0) {
+	projects.innerHTML = `
+	<div class="main-title">
+      <h2>My <span>Portfolio</span></h2>
+  </div>
+	<p class="port-text">
+     Here is some of my work that I've done in various programming languages.
+  </p>
+	<div class="portfolios">
+		${projectsList()}
+	</div>
+	`;
+} else {
+	projects.innerHTML = `<div class="header-content">No Content</di>` ;
+}
