@@ -200,3 +200,109 @@ if(projectsDoc.size > 0) {
 } else {
 	projects.innerHTML = `<div class="header-content">No Content</di>` ;
 }
+
+// Get Social Media list
+const socialMediaRef = collection(db, 'social');
+const socialMediaDoc = await getDocs(socialMediaRef);
+
+const socialMediaList = () => {
+	let socialMedia = '';
+	socialMediaDoc.forEach((doc) => {
+		const { socialName, socialLink } = doc.data();
+		socialMedia += `
+		<a href=${socialLink} target="_blank">
+					<i class="fab fa-${socialName}"></i>
+		</a>
+		`;
+	});
+	return socialMedia;
+};
+
+// Get Contact Section Data
+const contact = document.querySelector("#contact");
+const contactRef = doc(db, 'contact', 'data');
+const contactData = await getDoc(contactRef);
+
+if (contactData.exists()) {
+	const { email, phone, address, location } = contactData.data();
+   contact.innerHTML = `
+	 <div class="contact-container">
+	 <div class="main-title">
+		 <h2>Contact <span>Me</span></h2>
+	 </div>
+	 <div class="contact-content-con">
+		 <div class="left-contact">
+			 <h4>Contact me here</h4>
+			 <p>
+				 I'm interested in new Opportunities- especially
+				 ambitious or large projects. However if you have any other
+				 request or question, don't hesitate to use the form.
+			 </p>
+			 <div class="contact-info">
+				 <div class="contact-item">
+					 <div class="icon">
+						 <i class="fas fa-map-marker-alt"></i>
+						 <span>Location: </span>
+					 </div>
+					 <p>${location}</p>
+				 </div>
+				 <div class="contact-item">
+					 <div class="icon">
+						 <i class="fas fa-envelope"></i>
+						 <span>Email: </span>
+					 </div>
+					 <p>
+						 <span>${email}</span>
+					 </p>
+				 </div>
+				 <div class="contact-item">
+					 <div class="icon">
+						 <i class="fas fa-user-graduate"></i>
+						 <span>Mobile Number: </span>
+					 </div>
+					 <p>
+						 <span>${phone}</span>
+					 </p>
+				 </div>
+			 </div>
+			 <div class="contact-icons">
+				 <div class="contact-icon">
+					 ${socialMediaList()}
+				 </div>
+			 </div>
+		 </div>
+		 <div class="right-contact">
+			 <form
+				 action=${email}
+				 method="post"
+				 enctype="text/plain"
+				 class="contact-form"
+			 >
+				 <div class="input-control i-c-2">
+					 <input type="text" required placeholder="YOUR NAME" />
+					 <input type="email" required placeholder="YOUR EMAIL" />
+				 </div>
+				 <div class="input-control">
+					 <input type="text" required placeholder="ENTER SUBJECT" />
+				 </div>
+				 <div class="input-control">
+					 <textarea
+						 name=""
+						 id=""
+						 cols="15"
+						 rows="8"
+						 placeholder="Message Here..."
+					 ></textarea>
+				 </div>
+				 <div class="submit-btn">
+					 <button class="myButton" type="submit">Submit</button>
+				 </div>
+			 </form>
+		 </div>
+	 </div>
+ </div>
+	 `;
+} else {
+	contact.innerHTML = `<div class="header-content">No Content</di>` ;
+}
+
