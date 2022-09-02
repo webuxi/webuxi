@@ -1,6 +1,6 @@
 import { db, setDoc, doc, ref, storage, uploadBytes, getDownloadURL, collection, addDoc } from "./firebaseConfig.js";
 
-const aboutMeForm =document.querySelector("#aboutMeForm");
+const heroForm =document.querySelector("#heroSection");
 const heroRef = doc(db, 'hero', 'data');
 
 // Uploads files to firebase storage and returns the url
@@ -12,25 +12,25 @@ const uploadFile = async (file) => {
 }
 
 // Store Hero Section data in firebase
-const heroSection = async (about, headline, image, resume) => {
+const heroSection = async (description, title, image, resume) => {
   await setDoc(heroRef, {
-		about: about,
-		headline: headline,
+		description: description,
+		title: title,
 		image: image,
 		resume: resume,
 	 });
 }
 
-aboutMeForm.addEventListener('submit', async (e) => {
+heroForm.addEventListener('submit', async (e) => {
 	e.preventDefault();
-	const about = document.querySelector("#Aboutme2").value;
-	const headline = document.querySelector("#NameAbout").value;
-	const image = document.querySelector("#imageAbout").files[0];
-	const resume = document.querySelector("#cv").files[0];
+	const title = document.querySelector("#title").value;
+	const description = document.querySelector("#description").value;
+	const image = document.querySelector("#heroImage").files[0];
+	const resume = document.querySelector("#heroCV").files[0];
 	const storedImage = await uploadFile(image);
 	const storedResume = await uploadFile(resume);
-	heroSection(about, headline, storedImage, storedResume);
-	aboutMeForm.reset();
+	heroSection(title, description, storedImage, storedResume);
+	heroForm.reset();
 });
 
 // Store Experience data in firebase
@@ -158,4 +158,27 @@ socialForm.addEventListener('submit', async (e) => {
 	const socialLink = document.querySelector("#socialLink").value;
 	socialSection(socialName, socialLink);
 	socialForm.reset();
+});
+
+// Store About Me data in firebase
+const aboutMeForm =document.querySelector("#aboutMeForm");
+const aboutMeRef = doc(db, 'aboutMe', 'data');
+
+// Store Hero Section data in firebase
+const aboutMeSection = async (about, headline, resume) => {
+  await setDoc(aboutMeRef, {
+		about: about,
+		headline: headline,
+		resume: resume,
+	 });
+}
+
+aboutMeForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const about = document.querySelector("#Aboutme2").value;
+	const headline = document.querySelector("#NameAbout").value;
+	const resume = document.querySelector("#cv").files[0];
+	const storedResume = await uploadFile(resume);
+	aboutMeSection(about, headline, storedResume);
+	aboutMeForm.reset();
 });

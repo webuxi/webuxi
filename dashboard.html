@@ -115,6 +115,17 @@
             </a>
           </li>
 
+          <li class="tooltip-element" data-tooltip="1">
+            <a href="/index.html" data-active="2">
+              <div class="icon">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <button class="tablinks"><span class="link hide">Portfolio</span>
+              </button>
+
+            </a>
+          </li>
+
 
         </ul>
 
@@ -214,31 +225,31 @@
 
       <div id="website" class="tabcontent2">
 
-        <form action="setting-web.php" class="form1">
+        <form id="heroSection" method="post" class="form1">
 
           <div class="row">
-            <div class="col-25">
-              <label for="langouge"> Languesge</label>
-            </div>
-            <div class="col-75">
-              <select name="languege" id="lang">
-                <option value="English">English</option>
-                <option value="French">French</option>
-              </select>
-            </div>
+
             <div class="col-25">
               <label for="title">Site title</label>
             </div>
             <div class="col-75">
-              <input type="text" id="Stitel" placeholder="Site title">
-
+              <input type="text" id="title" placeholder="Site title">
             </div>
+
+            <div class="col-25">
+              <label for="description">Descreption</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="description" placeholder="Descreption">
+            </div>
+
             <div class="col-25">
               <label for="Email">Webmaster E-mail</label>
             </div>
             <div class="col-75">
               <input type="text" id="Wemail" placeholder="E-mail">
             </div>
+
             <div class="col-25">
               <label for="imagebg">Home page background</label>
             </div>
@@ -247,10 +258,17 @@
             </div>
 
             <div class="col-25">
-              <label for="imagebg">About me image</label>
+              <label for="heroImage">About me image</label>
             </div>
             <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
+              <input type="file" id="heroImage" width="100%" height="auto">
+            </div>
+            
+            <div class="col-25">
+              <label for="heroCV">Resume</label>
+            </div>
+            <div class="col-75">
+              <input type="file" id="heroCV" width="100%" height="auto">
             </div>
 
 
@@ -430,13 +448,7 @@
             <div class="col-75">
               <input type="text" id="Aboutme2" placeholder="text">
             </div>
-            <div class="col-25">
-              <label for="imageAbout">image</label>
-            </div>
-            <div class="col-75">
-              <input type="file" id='imageAbout' width="100%" height="auto">
-            </div>
-
+           
             <div class="col-25">
               <label for="cv">Resume</label>
             </div>
