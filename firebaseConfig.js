@@ -4,7 +4,13 @@ import { getFirestore, collection, setDoc, doc, addDoc, getDoc, getDocs } from '
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-storage.js"
 // Firebase configuration
 const firebaseConfig = {
-	
+	apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 // Initialize Firebase
