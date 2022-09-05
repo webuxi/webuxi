@@ -11,8 +11,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <script defer type="module" src="./firebaseConfig.js"></script>
-  <script defer type="module" src="./dashboard.js"></script>
-  <script defer type="module" src="./tracking.js"></script>
+
+  
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -421,7 +421,7 @@
       <div id="Aboutme" class="tabcontent3">
 
 
-        <form action="aboutme.php" class="form1">
+        <form method="post" id='aboutMeForm' class="form1">
 
           <div class="row">
             <div class="col-25">
@@ -437,28 +437,17 @@
             <div class="col-75">
               <input type="text" id="Aboutme2" placeholder="text">
             </div>
-            <div class="col-25">
-              <label for="imageAbout">image</label>
-            </div>
-            <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
-            </div>
-
+           
             <div class="col-25">
               <label for="cv">Resume</label>
             </div>
             <div class="col-75">
-              <input type="file" onchange="previewFile()" width="100%" height="auto">
+              <input type="file" id='cv' width="100%" height="auto">
             </div>
 
-            <br><br>
-            <hr>
-            <div class="row">
-              <div class="col-75">
-                <label for=""></label>
-              </div>
-              <input type="submit" value="Save">
 
+            <div class="row">
+              <input type="submit" value="Save">
             </div>
           </div>
         </form>
@@ -468,14 +457,14 @@
       <div id="Contact" class="tabcontent3">
 
 
-        <form action="contact.php" class="form1">
+        <form method="post" id="contactForm" class="form1">
 
           <div class="row">
             <div class="col-25">
-              <label for="Address">Address</label>
+              <label for="address">Address</label>
             </div>
             <div class="col-75">
-              <input type="text" id="adress" placeholder="Adresse ">
+              <input type="text" id="address" placeholder="Adresse ">
 
             </div>
             <div class="col-25">
@@ -488,25 +477,20 @@
               <label for="phone">Phone Number</label>
             </div>
             <div class="col-75">
-              <input type="text" id="phone" placeholder="Phone number">
+              <input type="tel" id="phone" placeholder="Phone number">
             </div>
 
             <div class="col-25">
               <label for="email">E-mail</label>
             </div>
             <div class="col-75">
-              <input type="text" id="email" placeholder="Email">
+              <input type="email" id="email" placeholder="Email">
             </div>
 
-            <br>
-            <hr>
+
 
             <div class="row">
-              <div class="col-75">
-                <label for=""></label>
-              </div>
               <input type="submit" value="Save">
-
             </div>
           </div>
         </form>
@@ -516,45 +500,26 @@
       <div id="Social" class="tabcontent3">
 
 
-        <form action="social.php" class="form1">
+        <form method="post" id="socialForm" class="form1">
 
           <div class="row">
             <div class="col-25">
-              <label for="facebook">Facebook</label>
+              <label for="socialName">Social Media Name</label>
             </div>
             <div class="col-75">
-              <input type="text" id="faceLink" placeholder="//https: ">
-
-            </div>
-            <div class="col-25">
-              <label for="instagram">Instagram</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Instagram" placeholder="//https:">
-            </div>
-            <div class="col-25">
-              <label for="linkedin">Linkedin</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="Linkedin" placeholder="//https:">
+              <input type="text" id="socialName" placeholder="Social Media Name">
             </div>
 
             <div class="col-25">
-              <label for="gitgub">Github</label>
+              <label for="socialLink">Social Media Link</label>
             </div>
             <div class="col-75">
-              <input type="text" id="Github" placeholder="//https:">
+              <input type="url" id="socialLink" placeholder="https://">
             </div>
 
-            <br>
-            <hr>
 
             <div class="row">
-              <div class="col-75">
-                <label for=""></label>
-              </div>
               <input type="submit" value="Save">
-
             </div>
           </div>
         </form>
