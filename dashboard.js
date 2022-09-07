@@ -29,7 +29,7 @@ heroForm.addEventListener('submit', async (e) => {
 	const resume = document.querySelector("#heroCV").files[0];
 	const storedImage = await uploadFile(image);
 	const storedResume = await uploadFile(resume);
-	heroSection(title, description, storedImage, storedResume);
+	heroSection(description, title, storedImage, storedResume);
 	heroForm.reset();
 });
 
